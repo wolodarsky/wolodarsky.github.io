@@ -12,7 +12,7 @@ define('final-project/tests/app.lint-test', [], function () {
 
   QUnit.test('components/line-chart.js', function (assert) {
     assert.expect(1);
-    assert.ok(false, 'components/line-chart.js should pass ESLint\n\n5:15 - \'mean\' is defined but never used. (no-unused-vars)\n5:21 - \'ascending\' is defined but never used. (no-unused-vars)\n80:23 - \'d3\' is not defined. (no-undef)');
+    assert.ok(true, 'components/line-chart.js should pass ESLint\n\n');
   });
 
   QUnit.test('controllers/application.js', function (assert) {
@@ -28,16 +28,6 @@ define('final-project/tests/app.lint-test', [], function () {
   QUnit.test('router.js', function (assert) {
     assert.expect(1);
     assert.ok(true, 'router.js should pass ESLint\n\n');
-  });
-
-  QUnit.test('routes/application.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'routes/application.js should pass ESLint\n\n');
-  });
-
-  QUnit.test('services/data-rows.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'services/data-rows.js should pass ESLint\n\n');
   });
 });
 define('final-project/tests/helpers/destroy-app', ['exports', 'ember'], function (exports, _ember) {
@@ -193,16 +183,6 @@ define('final-project/tests/tests.lint-test', [], function () {
     assert.expect(1);
     assert.ok(true, 'unit/controllers/application-test.js should pass ESLint\n\n');
   });
-
-  QUnit.test('unit/routes/application-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/routes/application-test.js should pass ESLint\n\n');
-  });
-
-  QUnit.test('unit/services/data-rows-test.js', function (assert) {
-    assert.expect(1);
-    assert.ok(true, 'unit/services/data-rows-test.js should pass ESLint\n\n');
-  });
 });
 define('final-project/tests/unit/controllers/application-test', ['ember-qunit'], function (_emberQunit) {
   'use strict';
@@ -216,33 +196,6 @@ define('final-project/tests/unit/controllers/application-test', ['ember-qunit'],
   (0, _emberQunit.test)('it exists', function (assert) {
     var controller = this.subject();
     assert.ok(controller);
-  });
-});
-define('final-project/tests/unit/routes/application-test', ['ember-qunit'], function (_emberQunit) {
-  'use strict';
-
-  (0, _emberQunit.moduleFor)('route:application', 'Unit | Route | application', {
-    // Specify the other units that are required for this test.
-    // needs: ['controller:foo']
-  });
-
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var route = this.subject();
-    assert.ok(route);
-  });
-});
-define('final-project/tests/unit/services/data-rows-test', ['ember-qunit'], function (_emberQunit) {
-  'use strict';
-
-  (0, _emberQunit.moduleFor)('service:data-rows', 'Unit | Service | data rows', {
-    // Specify the other units that are required for this test.
-    // needs: ['service:foo']
-  });
-
-  // Replace this with your real tests.
-  (0, _emberQunit.test)('it exists', function (assert) {
-    var service = this.subject();
-    assert.ok(service);
   });
 });
 require('final-project/tests/test-helper');
